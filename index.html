@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>REDDESPEGA - Inicio</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <img src="img/logo.1.png" alt="REDDESPEGA Logo" class="logo" />
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Haz despegar tu negocio 🚀</h1>
+      <p>Marketing para marcas con potencial pero sin visibilidad.</p>
+      <a href="contacto.html" class="btn">Contáctanos</a>
+    </div>
+  </section>
+
+  <section class="beneficios">
+    <div class="beneficio">
+      <h3>🎯 Estrategia con sentido</h3>
+      <p>No hacemos contenido por hacer: todo tiene un objetivo.</p>
+    </div>
+    <div class="beneficio">
+      <h3>🎨 Diseño que impacta</h3>
+      <p>Visuales pensados para captar atención y reflejar tu esencia.</p>
+    </div>
+    <div class="beneficio">
+      <h3>💰 Precios accesibles</h3>
+      <p>Paquetes pensados para emprendedores que recién comienzan.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>¿Qué hacemos?</h2>
+    <p>Diseñamos estrategias visuales, creamos contenido digital y mejoramos la presencia de tu marca en redes sociales.</p>
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="img/ejemplo1.png" alt="Post promocional para tienda local">
+        <p>Post promocional para tienda local</p>
+      </div>
+      <div class="gallery-item">
+        <img src="img/ejemplo2.png" alt="Identidad visual para nuevo emprendimiento">
+        <p>Identidad visual para nuevo emprendimiento</p>
+      </div>
+      <div class="gallery-item">
+        <img src="img/ejemplo3.png" alt="Campaña digital para redes sociales">
+        <p>Campaña digital para redes sociales</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimonios">
+    <h2>Lo que dicen nuestros clientes</h2>
+    <div class="testimonio">
+      <p>"Gracias a REDDESPEGA mis redes empezaron a verse más pro. ¡Mis ventas subieron!"</p>
+      <strong>— Luisa R., boutique en Chiclayo</strong>
+    </div>
+  </section>
+
+  <section class="clientes">
+    <h2>Marcas que confiaron en nosotros</h2>
+    <div class="logos-clientes">
+      <img src="img/cliente1.png" alt="Cliente 1">
+      <img src="img/cliente2.png" alt="Cliente 2">
+      <img src="img/cliente3.png" alt="Cliente 3">
+    </div>
+  </section>
+
+  <section class="video-presentacion">
+    <h2>Así trabajamos</h2>
+    <div class="video-container">
+      <iframe width="1310" height="737" src="https://www.youtube.com/embed/B1iNTmQhIhg" title="Publicidad audiovisual" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <section class="llamada-final">
+    <h2>¿Estás listo para despegar?</h2>
+    <a href="contacto.html" class="btn">Quiero una asesoría gratuita</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 REDDESPEGA. Todos los derechos reservados.</p>
+  </footer>
+
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img">
+    <div id="caption"></div>
+  </div>
+
+  <script>
+    const galleryImages = document.querySelectorAll('.gallery-item img');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const captionText = document.getElementById('caption');
+    const closeBtn = document.querySelector('.close');
+
+    galleryImages.forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'block';
+        lightboxImg.src = img.src;
+        captionText.innerHTML = img.alt;
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
